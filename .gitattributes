@@ -1,0 +1,8 @@
+# Frozen scientific inputs must keep their original bytes and line endings.
+*.csv -text
+*.json -text
+*.jsonl -text
+*.zip binary
+*.gz binary
+*.npz binary
+*.pdf binary

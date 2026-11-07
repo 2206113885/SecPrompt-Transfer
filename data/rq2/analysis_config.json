@@ -1,0 +1,92 @@
+{
+  "analysis_seed": 20261013,
+  "bootstrap_replicates": 2000,
+  "gitreq_target_sha256": "d765fb052feccb0fc0d031595b855834637d03662d798c090c309e32b6b772e7",
+  "model_fingerprint_sha256": {
+    "granite3_2_8b": "6633f1c18ccb31e49b95abdc659efb616f79e9833a4a3d1eb7565a6d6c550ba9",
+    "llama3_8b": "de5af55764ede1c96d2842521d3612deebaf2b0ccbdf60b95f1aedc59162c553",
+    "qwen2_7b": "9e7bcf13ab249e60aacb5b7f361dfb8ba61c978adc0c8ce6c5d664960e7ec207"
+  },
+  "rq1_inference_config_sha256": "33831af321e74adf4ade967e42b1fad5c8122fa2d2d6e7979eb9d3202c19272e",
+  "rq1_interface_protocol_sha256": "11ce9c1430086985b408ca3c47e80cc4b920d4c4f746190805ccac31b8cadb1a",
+  "rq2_config": {
+    "analysis_random_seed": 20261013,
+    "bootstrap_replicates": 2000,
+    "expected_design": {
+      "candidate_occurrences": 630,
+      "expected_new_routes": 321,
+      "expected_reused_routes": 29,
+      "expected_unique_routes": 350,
+      "expected_unique_routes_by_model": {
+        "granite3_2_8b": 125,
+        "llama3_8b": 128,
+        "qwen2_7b": 97
+      },
+      "gitreq_rows": 6302,
+      "iterations_per_cell": 21,
+      "source_cells": 30,
+      "source_iteration_events": 600,
+      "source_validation_predictions": 96390,
+      "t_all_rows": 6302,
+      "t_nfr_rows": 5771
+    },
+    "gitreq_enriched": "/root/prompt_transfer/datasets/gitreq/derived/v3/gitreq_enriched_v3.csv",
+    "gitreq_enriched_sha256": "d765fb052feccb0fc0d031595b855834637d03662d798c090c309e32b6b772e7",
+    "gpu_queues": {
+      "0": [
+        "granite3_2_8b"
+      ],
+      "1": [
+        "llama3_8b",
+        "qwen2_7b"
+      ]
+    },
+    "labels": [
+      "Non-security",
+      "Security"
+    ],
+    "max_context_tokens": 2048,
+    "max_generation_tokens": 64,
+    "max_retries_per_vote": 2,
+    "near_optimal_pp_primary": 1.0,
+    "near_optimal_pp_sensitivity": [
+      0.5,
+      2.0
+    ],
+    "output_root": "/root/frozen_prompt_transfer/runs/rq2-ranking-v1-balanced",
+    "rq1_config_path": "configs/rq1_origin_v1.json",
+    "rq1_prediction_root": "/root/frozen_prompt_transfer/runs/rq1-origin-v1/predictions",
+    "rq1_preflight_root": "/root/frozen_prompt_transfer/runs/target-deployment-v1/preflight",
+    "rq1_route_manifest": "/root/frozen_prompt_transfer/runs/rq1-origin-v1/route-manifest.json",
+    "security_word_pattern": "\\bsecurity\\b",
+    "smoke_row_indices": [
+      0,
+      1,
+      2
+    ],
+    "source_archive": "/root/frozen_prompt_transfer/runs/source-optimization-v4/source-matrix-30cells-freeze-2026-10-10.tar.gz",
+    "source_archive_sha256": "6980c68109639305d08f7cbaa4669ed3ccbeb5f3fed1908914a1efc0ec95ad06",
+    "source_csv_sha256": "d6d1535bacb754f3390a60638f9de38bacd72499f694f34b14808b01b5c77083",
+    "stage": "rq2_candidate_ranking",
+    "study": "frozen-prompt-transfer",
+    "target_fold_algorithm": "greedy_group_multilabel_balance_v1",
+    "target_fold_seed": 20261013,
+    "target_repository_folds": 5,
+    "tokenizer_audit_batch_size": 32,
+    "version": "rq2-ranking-v1-balanced"
+  },
+  "rq2_config_sha256": "dad5fd6de58d17c142883ae992a9a3b09d8504877b0b45405b16148c98f2d219",
+  "rq2_protocol_sha256": "76c827c405742b8b4f8b23f60eda85908f7b1032b671027e12ea37de769abbfa",
+  "software_versions": {
+    "lm-format-enforcer": "0.10.6",
+    "numpy": "1.26.4",
+    "pandas": "3.0.6",
+    "python": "3.12.3",
+    "torch": "2.5.1",
+    "transformers": "4.46.3",
+    "vllm": "0.6.4"
+  },
+  "source_audit_sha256": "c5819b10d07793e5f0adb83f339065978135c5ece8f998d07f8505af7ecc8a21",
+  "target_fold_algorithm": "greedy_group_multilabel_balance_v1",
+  "target_fold_seed": 20261013
+}

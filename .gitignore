@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+reproduced/
+*.log.tmp
+models/
+.env
+.env.*
+*.pem
+*.key

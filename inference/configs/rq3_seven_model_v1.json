@@ -1,0 +1,20 @@
+{
+  "version": "rq3-seven-model-v1.1",
+  "base_spec": "configs/target_deployment_v1.json",
+  "additional_spec": "configs/target_deployment_extra_preflight_v1.json",
+  "output_root": "/root/frozen_prompt_transfer/runs/rq3-seven-model-v1_1",
+  "context_cache_root": "/root/frozen_prompt_transfer/runs/rq3-seven-model-v1",
+  "rq1_root": "/root/frozen_prompt_transfer/runs/rq1-origin-v1",
+  "rq2_root": "/root/frozen_prompt_transfer/runs/rq2-ranking-v1-balanced",
+  "gpu": 0,
+  "model_order": ["llama3_8b", "qwen2_7b", "granite3_2_8b", "falcon3_7b", "ministral_8b", "granite3_3_8b", "qwen3_8b"],
+  "votes_per_item": 1,
+  "default_python": "/root/prompt_transfer/.venvs/vllm-0.6.4-py312/bin/python",
+  "source_csv_sha256": "d6d1535bacb754f3390a60638f9de38bacd72499f694f34b14808b01b5c77083",
+  "tokenizer_batch_size": 128,
+  "maximum_attempts": 3,
+  "progress_interval": 100,
+  "analysis_seed": 20261021,
+  "views": ["T_All", "T_NFR"],
+  "reuse_policy": "verified_rq2_first_vote_projection_not_majority"
+}

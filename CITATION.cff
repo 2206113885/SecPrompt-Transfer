@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript and the original datasets and methods. This is an unpublished private review snapshot."
+type: software
+title: "Prompt Transfer: Replication Materials"
+authors:
+  - family-names: He
+    given-names: Yizheng
+  - family-names: Fei
+    given-names: Zhiwei
+  - family-names: Ge
+    given-names: Jidong
+version: "0.1.0-review"
+date-released: "2026-11-07"
+repository-code: "https://github.com/2206113885/prompt-transfer-replication"

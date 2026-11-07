@@ -1,0 +1,16 @@
+\begin{tabular}{lrrrr}
+\toprule
+ & \multicolumn{2}{c}{Median Kendall $\tau_b$} & \multicolumn{2}{c}{Median gap (pp)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Group & Val--test & Test--target & Source test & Target \\
+\midrule
+Llama--PE2 & 0.800 & 0.423 & 0.000 & 0.110 \\
+Llama--BT-APE & 0.442 & -0.019 & 0.852 & 1.026 \\
+Qwen2--PE2 & 0.816 & 0.333 & 0.853 & 3.376 \\
+Qwen2--BT-APE & 0.601 & 0.216 & 1.093 & 0.410 \\
+Granite--PE2 & 0.667 & 0.595 & 0.000 & 0.000 \\
+Granite--BT-APE & 0.540 & 0.588 & 1.170 & 0.521 \\
+\midrule
+All 30 cells & 0.568 & 0.411 & 0.769 & 0.412 \\
+\bottomrule
+\end{tabular}

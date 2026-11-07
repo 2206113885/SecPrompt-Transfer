@@ -1,0 +1,16 @@
+{
+  "base_spec": "configs/target_deployment_v1.json",
+  "version": "source-test-all-candidates-v1_1",
+  "output_root": "/root/frozen_prompt_transfer/runs/source-test-all-candidates-v1_1",
+  "rq2_root": "/root/frozen_prompt_transfer/runs/rq2-ranking-v1-balanced",
+  "rq3_frozen_prompts": "/root/frozen_prompt_transfer/runs/rq3-seven-model-v1_1/frozen_prompts.json",
+  "source_csv_sha256": "d6d1535bacb754f3390a60638f9de38bacd72499f694f34b14808b01b5c77083",
+  "gpu": 0,
+  "model_order": ["llama3_8b", "qwen2_7b", "granite3_2_8b"],
+  "votes_per_item": 3,
+  "score_tolerance": 1e-12,
+  "test_items_per_cell": 204,
+  "expected_cells": 30,
+  "expected_occurrences": 630,
+  "expected_cell_unique": 380
+}

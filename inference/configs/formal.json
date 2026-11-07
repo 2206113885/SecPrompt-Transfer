@@ -1,0 +1,40 @@
+{
+  "protocol_version": "btape-hf-vllm-singleton-classification-equalization-v1",
+  "dataset_path": "data/SecReq_510_BTAPE.csv",
+  "definitions_path": "definitions/security.txt",
+  "output_path": "outputs/formal.json",
+  "labels": [
+    "Non-security",
+    "Security"
+  ],
+  "positive_label": "Security",
+  "backend": "hf_vllm",
+  "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 42,
+  "n_max": 20,
+  "backtrack_threshold": 3,
+  "voting_runs": 3,
+  "temperature": 0.0,
+  "classification_num_predict": 64,
+  "proposal_num_predict": 1536,
+  "hf_vllm": {
+    "model_dir": "/root/prompt_transfer/models/hf/meta-llama--Meta-Llama-3-8B-Instruct",
+    "manifest_path": "/root/prompt_transfer/models/hf/meta-llama--Meta-Llama-3-8B-Instruct/prompt_transfer_manifest.json",
+    "expected_revision": "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2",
+    "expected_vllm_version": "0.6.4",
+    "physical_gpu": 1,
+    "dtype": "half",
+    "gpu_memory_utilization": 0.75,
+    "max_model_len": 8192,
+    "classification_max_model_len": 2048,
+    "enforce_eager": true,
+    "engine_seed": 0,
+    "attention_backend": "XFORMERS",
+    "stop_strings": [
+      "<|start_header_id|>",
+      "<|end_header_id|>",
+      "<|eot_id|>"
+    ],
+    "max_batch_requests": 1
+  }
+}

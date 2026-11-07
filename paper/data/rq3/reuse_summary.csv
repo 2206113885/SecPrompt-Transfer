@@ -1,0 +1,8 @@
+deployer,unique_routes,reused_routes,new_routes_required,saved_calls,new_calls_required
+llama3_8b,27,9,18,56718,113436
+qwen2_7b,27,9,18,56718,113436
+granite3_2_8b,27,11,16,69322,100832
+falcon3_7b,27,0,27,0,170154
+ministral_8b,27,0,27,0,170154
+granite3_3_8b,27,0,27,0,170154
+qwen3_8b,27,0,27,0,170154

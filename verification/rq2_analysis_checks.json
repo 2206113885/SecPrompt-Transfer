@@ -1,0 +1,34 @@
+{
+  "new_model_calls": 0,
+  "original_files_modified": false,
+  "independent_reanalysis": true,
+  "routes": 350,
+  "route_item_predictions": 2205700,
+  "logical_votes": 6617100,
+  "prediction_sources": {
+    "rq2_new_inference": 2022942,
+    "rq1_reused": 182758
+  },
+  "vote_disagreement_items": 0,
+  "target_metric_rows_recomputed": 1520,
+  "source_occurrences_verified": 630,
+  "source_validation_vote_rows_verified": 96390,
+  "cell_unique_candidates": 380,
+  "source_repeated_prediction_disagreements": 0,
+  "source_selection_verified": 30,
+  "topk_rows_recomputed": 180,
+  "target_oof_rows_verified": 362190,
+  "calibration_selections_verified": 300,
+  "repository_fold_leakage": 0,
+  "pooled_oof_summaries_verified": 60,
+  "target_rank_rows_verified": 180,
+  "target_gap_rows_verified": 60,
+  "source_bootstrap_candidate_frequencies_verified": 380,
+  "bootstrap_rank_interval_rows_recomputed": 180,
+  "schema_notes": [
+    "Original candidate_diversity.csv repeats 30 cells for two views but omits view; use new candidate_diversity_by_view.csv.",
+    "Original candidate_scores macro_f1_rank is tie-broken ordinal rank, not average rank; new candidate_scores_audited names both explicitly.",
+    "Posthoc source-macro selector is a new offline diagnostic; not the frozen primary selection policy."
+  ],
+  "status": "PASS"
+}

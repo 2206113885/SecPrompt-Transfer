@@ -1,0 +1,60 @@
+{
+  "dataset": "GitReq",
+  "doi": "10.6084/m9.figshare.31669477.v3",
+  "version": 3,
+  "license": "CC BY 4.0",
+  "raw_files": [
+    {
+      "name": "GitReq.csv",
+      "bytes": 2267183,
+      "sha256": "50731f163e5f78e8c5e6444fe9717f2b90b95f45b23eaea361f1a53cd04d5670"
+    },
+    {
+      "name": "GitReq_FR.csv",
+      "bytes": 133080,
+      "sha256": "9f5ee7490981803e8908890c7459bb63a20b591c956395b29741ed082bb560da"
+    },
+    {
+      "name": "GitReq_Keywords.xlsx",
+      "bytes": 9517,
+      "sha256": "da64bb7a0f0d3be872d407e8decdd95658cbb3e02517b63d64af9f13e34174ba"
+    },
+    {
+      "name": "GitReq_NFR.csv",
+      "bytes": 2516091,
+      "sha256": "8c9927bd648d41d6288ca40bcfd96e8e1e8cfb20d2b6eae1824c1057405bb90f"
+    },
+    {
+      "name": "Prompt.rtf",
+      "bytes": 1904,
+      "sha256": "b76ac016a18f05e9bf979425330766630ad0a3aaf7084a1e3c54b58398bbcc1b"
+    },
+    {
+      "name": "preprocessing_counts.xlsx",
+      "bytes": 10390,
+      "sha256": "8891604c96a271505f9cdb235bbd41f9b01126ab83e99d997ddad1c6fbb8afda"
+    }
+  ],
+  "derived_files": {
+    "enriched": {
+      "path": "/root/prompt_transfer/datasets/gitreq/derived/v3/gitreq_enriched_v3.csv",
+      "sha256": "d765fb052feccb0fc0d031595b855834637d03662d798c090c309e32b6b772e7"
+    },
+    "binary_primary": {
+      "path": "/root/prompt_transfer/datasets/gitreq/derived/v3/gitreq_security_binary_v3.csv",
+      "sha256": "d2872f116df0892a7da4375dcf9039fc087e3fe56ccc218b6e8126cae38bd2f8"
+    },
+    "binary_normalized_dedup_sensitivity": {
+      "path": "/root/prompt_transfer/datasets/gitreq/derived/v3/gitreq_security_binary_normalized_dedup_sensitivity_v3.csv",
+      "sha256": "80fe17b90ff8cbeeca7b73dad8a9a68e5eab6f5f4b722a6ea3fee37bcdaee220"
+    }
+  },
+  "primary_experimental_view": "gitreq_security_binary_v3.csv",
+  "transformation": {
+    "source_rows": "GitReq_NFR.csv followed by GitReq_FR.csv",
+    "positive": "original_label == Security",
+    "negative": "original_label != Security",
+    "rows_removed_primary": 0,
+    "target_labels_used_for_prompt_selection": false
+  }
+}

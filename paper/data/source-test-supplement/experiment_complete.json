@@ -1,0 +1,18 @@
+{
+  "analysis_hashes": {
+    "candidate_scores.csv": "cae0bcd735d21ac822a984819ad53df73a4da589ecf45b3e03eb2ef0f49e7f52",
+    "cell_rank_reference.csv": "0b5d97b947fcf472d4fda8ba1dec368f09ec8df9f53a2eca7475d031e4886f70",
+    "cell_selection_gaps.csv": "41c8ba7e1f4961973b3f603aa79325d4f195615e31954117ead49bd641b611d0",
+    "group_summary.csv": "2c1e68ea9a8208d20d153da0f676d5785ec292b0f308e4b3a3e26ef6ae7001a7"
+  },
+  "checks": {
+    "candidate_items": 77520,
+    "candidate_score_rows": 760,
+    "complete_routes": 380,
+    "gap_rows": 180,
+    "logical_votes": 232560,
+    "rank_rows": 300,
+    "source_selection_changed": false,
+    "status": "PASS"
+  }
+}

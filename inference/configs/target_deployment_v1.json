@@ -1,0 +1,75 @@
+{
+  "study": "frozen-prompt-transfer",
+  "stage": "preflight",
+  "version": "target-deployment-v1",
+  "output_root": "/root/frozen_prompt_transfer/runs/target-deployment-v1",
+  "source_matrix": "/root/frozen_prompt_transfer/runs/source-optimization-current/matrix",
+  "source_archive": "/root/frozen_prompt_transfer/runs/source-optimization-v4/source-matrix-30cells-freeze-2026-10-10.tar.gz",
+  "source_archive_sha256": "6980c68109639305d08f7cbaa4669ed3ccbeb5f3fed1908914a1efc0ec95ad06",
+  "source_csv": "/root/frozen_prompt_transfer/data/raw/SecReq_510_BTAPE.csv",
+  "gitreq_nfr": "/root/prompt_transfer/datasets/gitreq/raw/figshare-31669477-v3/GitReq_NFR.csv",
+  "gitreq_fr": "/root/prompt_transfer/datasets/gitreq/raw/figshare-31669477-v3/GitReq_FR.csv",
+  "gitreq_enriched": "/root/prompt_transfer/datasets/gitreq/derived/v3/gitreq_enriched_v3.csv",
+  "gitreq_enriched_sha256": "d765fb052feccb0fc0d031595b855834637d03662d798c090c309e32b6b772e7",
+  "labels": ["Non-security", "Security"],
+  "preflight_seed": 42,
+  "preflight_repeats": 3,
+  "minimum_repeat_consistency": 0.995,
+  "formal_target_repeats_if_stable": 1,
+  "origin_target_repeats": 3,
+  "runtime": {
+    "vllm_version": "0.6.4",
+    "dtype": "half",
+    "gpu_memory_utilization": 0.75,
+    "max_model_len": 8192,
+    "classification_max_model_len": 2048,
+    "classification_num_predict": 64,
+    "enforce_eager": true,
+    "engine_seed": 0,
+    "attention_backend": "XFORMERS",
+    "max_batch_requests": 1,
+    "guided_decoding_backend": "lm-format-enforcer"
+  },
+  "models": {
+    "llama3_8b": {
+      "repository": "meta-llama/Meta-Llama-3-8B-Instruct",
+      "revision": "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2",
+      "model_dir": "/root/prompt_transfer/models/hf/meta-llama--Meta-Llama-3-8B-Instruct",
+      "weight_index_sha256": "146776fce3f6db1103aa6f249e65ee5544c5923ce6f971b092eee79aa6e5d37b",
+      "interface": "appendix_f",
+      "stop_strings": ["<|start_header_id|>", "<|end_header_id|>", "<|eot_id|>"]
+    },
+    "qwen2_7b": {
+      "repository": "Qwen/Qwen2-7B-Instruct",
+      "revision": "f2826a00ceef68f0f2b946d945ecc0477ce4450c",
+      "model_dir": "/root/prompt_transfer/models/hf/Qwen--Qwen2-7B-Instruct",
+      "weight_index_sha256": "f00d17cbf433746c391ad43948613e373aa51222dbee3b0db61ffff59a74bb1a",
+      "interface": "package_minimal",
+      "stop_strings": ["<|im_end|>", "<|endoftext|>"]
+    },
+    "granite3_2_8b": {
+      "repository": "ibm-granite/granite-3.2-8b-instruct",
+      "revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+      "model_dir": "/root/prompt_transfer/models/hf/ibm-granite--granite-3.2-8b-instruct",
+      "weight_index_sha256": "32fab6382f4cba5428af1b28ed350b6b33d6a413863e952fc10cc286328324e6",
+      "interface": "appendix_f",
+      "stop_strings": ["<|end_of_text|>", "<|start_of_role|>"]
+    },
+    "falcon3_7b": {
+      "repository": "tiiuae/Falcon3-7B-Instruct",
+      "revision": "1e57a0ecd176c7c139f289c60a74e57f887c3dfb",
+      "model_dir": "/root/prompt_transfer/models/hf/tiiuae--Falcon3-7B-Instruct",
+      "weight_index_sha256": "bfffd8bf721c4c6ca684a88cf25c330dbab58dbb7eb564fb388e582fd661a65c",
+      "interface": "appendix_f",
+      "stop_strings": []
+    },
+    "ministral_8b": {
+      "repository": "mistralai/Ministral-8B-Instruct-2410",
+      "revision": "2f494a194c5b980dfb9772cb92d26cbb671fce5a",
+      "model_dir": "/root/prompt_transfer/models/hf/mistralai--Ministral-8B-Instruct-2410",
+      "weight_index_sha256": "d08ce79ecc66f5ab39913d06b7803d723c58090a77605954807be64e70d861c7",
+      "interface": "appendix_f",
+      "stop_strings": []
+    }
+  }
+}

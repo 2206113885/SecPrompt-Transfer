@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "audit_scope": "Independent read-only inspection of complete prediction records, vote journals, frozen code/configuration, and independent confusion-matrix scoring; no new inference and no server writes",
+  "run_id": "3d926f8f-ff48-40ad-a755-05876c0d28fb",
+  "commit": "8cce78763aff26259c73faea0e1e357571eb139f",
+  "server_output_root": "/root/frozen_prompt_transfer/runs/concise-definition-gitreq-v1",
+  "source_code_root": "/root/.orx/runs/3d926f8f-ff48-40ad-a755-05876c0d28fb/repo",
+  "checks": {
+    "frozen_code_sha256_files_verified": 7,
+    "protocol_sha256_verified": true,
+    "definition_sha256_verified": true,
+    "dataset_sha256_verified": true,
+    "rq1_manifest_sha256_unchanged": true,
+    "attempt_runtime_fingerprints_match_frozen_rq1": true,
+    "completion_marker_prediction_sha256_verified": 3,
+    "unique_target_ids_per_model": 6302,
+    "nfr_mask_items_per_model": 5771,
+    "ordered_ids_gold_category_repository_match_dataset": true,
+    "journal_votes_equal_final_embedded_votes": true,
+    "valid_raw_binary_label_stop_and_batch1_for_every_vote": true,
+    "majority_vote_verified_for_every_item": true,
+    "rendered_request_hash_text_hash_input_token_count_match_frozen_context": true,
+    "input_tokens_plus_64_within_2048": true,
+    "prediction_routes_complete": 3,
+    "target_item_predictions": 18906,
+    "vote_records": 56718,
+    "globally_distinct_worker_id_batch_id_pairs": 56718,
+    "duplicate_item_vote_pairs": 0,
+    "error_records": 0,
+    "attempt_records": 3,
+    "independent_metrics_match_markers_and_summary_tolerance": 1e-12,
+    "new_inference_calls_during_audit": 0
+  },
+  "limitations": [
+    "Runtime metadata and frozen fingerprints were compared; this audit did not independently rehash all multi-gigabyte model weights.",
+    "Recorded request hashes/token counts were compared against all preflight context records; this audit did not rerun tokenization or model generation."
+  ],
+  "routes": [
+    {
+      "model": "llama3_8b",
+      "rows": 6302,
+      "journal_votes": 18906,
+      "all_three_labels_identical_items": 6302,
+      "all_three_raw_strings_identical_items": 6302,
+      "max_input_tokens": 439,
+      "inference_seconds": 2143.1608571880497,
+      "finished_at": "2026-10-25T12:00:09.379198+00:00",
+      "prediction_sha256": "4768953e678a93aac94e9e4feaec2b5ea7a597a2ac0cb1ead141e7e138fb4ce7",
+      "T_All": {"tp": 1470, "tn": 4392, "fp": 264, "fn": 176, "macro_f1": 0.9110604186659961, "weighted_f1": 0.9307567340755922},
+      "T_NFR": {"tp": 1470, "tn": 3915, "fp": 210, "fn": 176, "macro_f1": 0.9184815893895488, "weighted_f1": 0.9333173202178666}
+    },
+    {
+      "model": "qwen2_7b",
+      "rows": 6302,
+      "journal_votes": 18906,
+      "all_three_labels_identical_items": 6302,
+      "all_three_raw_strings_identical_items": 6302,
+      "max_input_tokens": 340,
+      "inference_seconds": 2053.208499387023,
+      "finished_at": "2026-10-25T12:34:48.902947+00:00",
+      "prediction_sha256": "71ae1cbc91fc03f4da94b785364942439b16ae7134690df104c97b85a7fd581b",
+      "T_All": {"tp": 1243, "tn": 4513, "fp": 143, "fn": 403, "macro_f1": 0.8814397368313694, "weighted_f1": 0.9108227686367677},
+      "T_NFR": {"tp": 1243, "tn": 3995, "fp": 130, "fn": 403, "macro_f1": 0.8804574042523208, "weighted_f1": 0.9049449629250692}
+    },
+    {
+      "model": "granite3_2_8b",
+      "rows": 6302,
+      "journal_votes": 18906,
+      "all_three_labels_identical_items": 6302,
+      "all_three_raw_strings_identical_items": 6302,
+      "max_input_tokens": 435,
+      "inference_seconds": 3009.1491360840155,
+      "finished_at": "2026-10-25T12:14:34.588068+00:00",
+      "prediction_sha256": "dc9596a038f4e3ba491ecc45e6959f70c08b5feab99f25ab470a79d5dcdb77e3",
+      "T_All": {"tp": 1260, "tn": 4584, "fp": 72, "fn": 386, "macro_f1": 0.8993130173945453, "weighted_f1": 0.9246785531184307},
+      "T_NFR": {"tp": 1260, "tn": 4063, "fp": 62, "fn": 386, "macro_f1": 0.8984028062021645, "weighted_f1": 0.9196000399260337}
+    }
+  ]
+}

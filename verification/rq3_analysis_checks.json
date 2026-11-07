@@ -1,0 +1,50 @@
+{
+  "baselines": 7,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20261023,
+  "complete": true,
+  "elapsed_seconds": 5.939512583077885,
+  "error_transition_identities_verified": true,
+  "input_kind": "verified compact prediction and vote arrays",
+  "items": 6302,
+  "logical_winner_cells": 210,
+  "maximum_score_absolute_error": 3.3306690738754696e-16,
+  "new_model_calls": 0,
+  "prediction_sources": {
+    "rq2_first_vote_projection": 182758,
+    "rq3_new_inference": 1008320
+  },
+  "raw_response_loader_replaced": true,
+  "repositories": 4080,
+  "routes": 189,
+  "shared_repository_weights": true,
+  "simultaneous_critical_value": 3.211330010543593,
+  "simultaneous_family_size": 84,
+  "summary": {
+    "T_All": {
+      "negative_cells": 32,
+      "negative_pointwise_intervals": 2,
+      "negative_simultaneous_intervals": 1,
+      "positive_cells": 150,
+      "positive_groups": 37,
+      "positive_leave_one_seed_out_groups": 30,
+      "positive_pointwise_intervals": 28,
+      "positive_simultaneous_intervals": 26,
+      "zero_cells": 28
+    },
+    "T_NFR": {
+      "negative_cells": 32,
+      "negative_pointwise_intervals": 2,
+      "negative_simultaneous_intervals": 1,
+      "positive_cells": 150,
+      "positive_groups": 38,
+      "positive_leave_one_seed_out_groups": 32,
+      "positive_pointwise_intervals": 29,
+      "positive_simultaneous_intervals": 27,
+      "zero_cells": 28
+    }
+  },
+  "upstream_group_means_reproduced": 84,
+  "upstream_route_scores_reproduced": 378,
+  "zero_self_differences_verified": true
+}

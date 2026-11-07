@@ -1,0 +1,481 @@
+{
+  "falcon3_7b": {
+    "attention_backend": "XFORMERS",
+    "backend": "hf_safetensors_vllm",
+    "classification_max_model_len": 2048,
+    "cuda_visible_devices": "0",
+    "dtype": "half",
+    "enforce_eager": true,
+    "engine_seed": 0,
+    "gpu_memory_utilization": 0.75,
+    "guided_choice": [
+      "Non-security",
+      "Security"
+    ],
+    "guided_decoding_backend": "lm-format-enforcer",
+    "local_artifact": {
+      "config_sha256": "7a8b434b91929e25bc2b96a5adf2b29f8e822a8bdbd249ce1fb09e2fa12beda7",
+      "expected_revision": "1e57a0ecd176c7c139f289c60a74e57f887c3dfb",
+      "observed_revisions": [
+        "1e57a0ecd176c7c139f289c60a74e57f887c3dfb"
+      ],
+      "revision_metadata_files": 12,
+      "tokenizer_config_sha256": "2e6f9ee711000ac383a007148159f3b9d8b23bf32efc593f1156c6ba65cddaef",
+      "total_weight_bytes": 14911130600,
+      "weight_index_sha256": "bfffd8bf721c4c6ca684a88cf25c330dbab58dbb7eb564fb388e582fd661a65c",
+      "weight_shards": [
+        {
+          "bytes": 4938900432,
+          "name": "model-00001-of-00004.safetensors"
+        },
+        {
+          "bytes": 4942085160,
+          "name": "model-00002-of-00004.safetensors"
+        },
+        {
+          "bytes": 4224838512,
+          "name": "model-00003-of-00004.safetensors"
+        },
+        {
+          "bytes": 805306496,
+          "name": "model-00004-of-00004.safetensors"
+        }
+      ]
+    },
+    "logical_gpu_capability": [
+      7,
+      0
+    ],
+    "logical_gpu_name": "Tesla V100-SXM2-32GB",
+    "max_batch_requests": 1,
+    "max_model_len": 8192,
+    "max_num_seqs": 1,
+    "model_dir": "/root/prompt_transfer/models/hf/tiiuae--Falcon3-7B-Instruct",
+    "model_manifest": null,
+    "model_manifest_path": null,
+    "model_manifest_sha256": null,
+    "model_name": "tiiuae/Falcon3-7B-Instruct",
+    "request_dispatch_batch_size": 1,
+    "stop_strings": [],
+    "tokenizer_chat_template_sha256": "914ccd80356f5822d1a50d97546e37f60c04ed831fe431aa40346574ec266901",
+    "tokenizer_class": "PreTrainedTokenizerFast",
+    "torch_cuda_version": "12.4",
+    "torch_version": "2.5.1+cu124",
+    "transformers_version": "4.46.3",
+    "vllm_version": "0.6.4"
+  },
+  "granite3_2_8b": {
+    "attention_backend": "XFORMERS",
+    "backend": "hf_safetensors_vllm",
+    "classification_max_model_len": 2048,
+    "cuda_visible_devices": "0",
+    "dtype": "half",
+    "enforce_eager": true,
+    "engine_seed": 0,
+    "gpu_memory_utilization": 0.75,
+    "guided_choice": [
+      "Non-security",
+      "Security"
+    ],
+    "guided_decoding_backend": "lm-format-enforcer",
+    "local_artifact": {
+      "config_sha256": "f6b1eca4bc5f8f5e67ab2c88a842fc0dd1e5f148de6f3fd14349ccdade07df8b",
+      "expected_revision": "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695",
+      "observed_revisions": [
+        "610d8c6ee9c84ce51f6dfd7bc5c0215d95d49695"
+      ],
+      "revision_metadata_files": 15,
+      "tokenizer_config_sha256": "fdc617feda7907bddc63907c2e922b1cbd677925b2068403cecc29c349a4725c",
+      "total_weight_bytes": 16341738616,
+      "weight_index_sha256": "32fab6382f4cba5428af1b28ed350b6b33d6a413863e952fc10cc286328324e6",
+      "weight_shards": [
+        {
+          "bytes": 4974661520,
+          "name": "model-00001-of-00004.safetensors"
+        },
+        {
+          "bytes": 4991447808,
+          "name": "model-00002-of-00004.safetensors"
+        },
+        {
+          "bytes": 4970460032,
+          "name": "model-00003-of-00004.safetensors"
+        },
+        {
+          "bytes": 1405169256,
+          "name": "model-00004-of-00004.safetensors"
+        }
+      ]
+    },
+    "logical_gpu_capability": [
+      7,
+      0
+    ],
+    "logical_gpu_name": "Tesla V100-SXM2-32GB",
+    "max_batch_requests": 1,
+    "max_model_len": 8192,
+    "max_num_seqs": 1,
+    "model_dir": "/root/prompt_transfer/models/hf/ibm-granite--granite-3.2-8b-instruct",
+    "model_manifest": null,
+    "model_manifest_path": null,
+    "model_manifest_sha256": null,
+    "model_name": "ibm-granite/granite-3.2-8b-instruct",
+    "request_dispatch_batch_size": 1,
+    "stop_strings": [
+      "<|end_of_text|>",
+      "<|start_of_role|>"
+    ],
+    "tokenizer_chat_template_sha256": "2216d3c3e5056029f148e6c980658f4e5b068f5c63dfbf18758dcc77c13350a0",
+    "tokenizer_class": "GPT2TokenizerFast",
+    "torch_cuda_version": "12.4",
+    "torch_version": "2.5.1+cu124",
+    "transformers_version": "4.46.3",
+    "vllm_version": "0.6.4"
+  },
+  "granite3_3_8b": {
+    "attention_backend": "XFORMERS",
+    "backend": "hf_safetensors_vllm",
+    "chat_template_kwargs": {},
+    "classification_max_model_len": 2048,
+    "cuda_visible_devices": "0",
+    "dtype": "half",
+    "enforce_eager": true,
+    "engine_seed": 0,
+    "gpu_memory_utilization": 0.75,
+    "guided_choice": [
+      "Non-security",
+      "Security"
+    ],
+    "guided_decoding_backend": "lm-format-enforcer",
+    "local_artifact": {
+      "config_sha256": "1313edf0d39dcf7ed35a072d341ec11b516c12acc4267cfb6d248c6bdcdddcb7",
+      "expected_revision": "51dd4bc2ade4059a6bd87649d68aa11e4fb2529b",
+      "observed_revisions": [
+        "51dd4bc2ade4059a6bd87649d68aa11e4fb2529b"
+      ],
+      "revision_metadata_files": 15,
+      "tokenizer_config_sha256": "f65a6a5a911424c85f157c40cfbdf06e025814c755480ba2e998d7fba1178664",
+      "total_weight_bytes": 16341771384,
+      "weight_index_sha256": "c3a88218300666c35343b129857d4e8583ee1b15bf68d90ab976f51744560379",
+      "weight_shards": [
+        {
+          "bytes": 4974694288,
+          "name": "model-00001-of-00004.safetensors"
+        },
+        {
+          "bytes": 4991447808,
+          "name": "model-00002-of-00004.safetensors"
+        },
+        {
+          "bytes": 4970460032,
+          "name": "model-00003-of-00004.safetensors"
+        },
+        {
+          "bytes": 1405169256,
+          "name": "model-00004-of-00004.safetensors"
+        }
+      ]
+    },
+    "logical_gpu_capability": [
+      7,
+      0
+    ],
+    "logical_gpu_name": "Tesla V100-SXM2-32GB",
+    "max_batch_requests": 1,
+    "max_model_len": 8192,
+    "max_num_seqs": 1,
+    "model_dir": "/root/prompt_transfer/models/hf/ibm-granite--granite-3.3-8b-instruct",
+    "model_manifest": null,
+    "model_manifest_path": null,
+    "model_manifest_sha256": null,
+    "model_name": "ibm-granite/granite-3.3-8b-instruct",
+    "request_dispatch_batch_size": 1,
+    "stop_strings": [
+      "<|end_of_text|>",
+      "<|start_of_role|>"
+    ],
+    "tokenizer_chat_template_sha256": "0bea7711316005a1c37c9941a7ee2a26311d223c979abee416aab0a402fc5b56",
+    "tokenizer_class": "GPT2TokenizerFast",
+    "torch_cuda_version": "12.4",
+    "torch_version": "2.5.1+cu124",
+    "transformers_version": "4.46.3",
+    "vllm_version": "0.6.4"
+  },
+  "llama3_8b": {
+    "attention_backend": "XFORMERS",
+    "backend": "hf_safetensors_vllm",
+    "classification_max_model_len": 2048,
+    "cuda_visible_devices": "0",
+    "dtype": "half",
+    "enforce_eager": true,
+    "engine_seed": 0,
+    "gpu_memory_utilization": 0.75,
+    "guided_choice": [
+      "Non-security",
+      "Security"
+    ],
+    "guided_decoding_backend": "lm-format-enforcer",
+    "local_artifact": {
+      "config_sha256": "61f3de03a16ca8046b05dc777bce72717022bc8522152eee61a69072272ef54b",
+      "expected_revision": "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2",
+      "observed_revisions": [
+        "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2"
+      ],
+      "revision_metadata_files": 4,
+      "tokenizer_config_sha256": "da0e3a7cce6e4d787e85eb1c24d548420e0d7fe2c7a214e192795c46e40d75bb",
+      "total_weight_bytes": 16060556376,
+      "weight_index_sha256": "146776fce3f6db1103aa6f249e65ee5544c5923ce6f971b092eee79aa6e5d37b",
+      "weight_shards": [
+        {
+          "bytes": 4976698672,
+          "name": "model-00001-of-00004.safetensors"
+        },
+        {
+          "bytes": 4999802720,
+          "name": "model-00002-of-00004.safetensors"
+        },
+        {
+          "bytes": 4915916176,
+          "name": "model-00003-of-00004.safetensors"
+        },
+        {
+          "bytes": 1168138808,
+          "name": "model-00004-of-00004.safetensors"
+        }
+      ]
+    },
+    "logical_gpu_capability": [
+      7,
+      0
+    ],
+    "logical_gpu_name": "Tesla V100-SXM2-32GB",
+    "max_batch_requests": 1,
+    "max_model_len": 8192,
+    "max_num_seqs": 1,
+    "model_dir": "/root/prompt_transfer/models/hf/meta-llama--Meta-Llama-3-8B-Instruct",
+    "model_manifest": null,
+    "model_manifest_path": null,
+    "model_manifest_sha256": null,
+    "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "request_dispatch_batch_size": 1,
+    "stop_strings": [
+      "<|start_header_id|>",
+      "<|end_header_id|>",
+      "<|eot_id|>"
+    ],
+    "tokenizer_chat_template_sha256": "ba03a121d097859c7b5b9cd03af99aafe95275210d2876f642ad9929a150f122",
+    "tokenizer_class": "PreTrainedTokenizerFast",
+    "torch_cuda_version": "12.4",
+    "torch_version": "2.5.1+cu124",
+    "transformers_version": "4.46.3",
+    "vllm_version": "0.6.4"
+  },
+  "ministral_8b": {
+    "attention_backend": "XFORMERS",
+    "backend": "hf_safetensors_vllm",
+    "classification_max_model_len": 2048,
+    "cuda_visible_devices": "1",
+    "dtype": "half",
+    "enforce_eager": true,
+    "engine_seed": 0,
+    "gpu_memory_utilization": 0.75,
+    "guided_choice": [
+      "Non-security",
+      "Security"
+    ],
+    "guided_decoding_backend": "lm-format-enforcer",
+    "local_artifact": {
+      "config_sha256": "c675c1d724fdf951ba97b7241da3b1dab23371ab6af069f20c4001eaa0ce1dd6",
+      "expected_revision": "2f494a194c5b980dfb9772cb92d26cbb671fce5a",
+      "observed_revisions": [
+        "2f494a194c5b980dfb9772cb92d26cbb671fce5a"
+      ],
+      "revision_metadata_files": 16,
+      "tokenizer_config_sha256": "7cf3f858feed324a6890898d95c208796b1a946e9841ee45e035ef84e9dc3699",
+      "total_weight_bytes": 16039654592,
+      "weight_index_sha256": "d08ce79ecc66f5ab39913d06b7803d723c58090a77605954807be64e70d861c7",
+      "weight_shards": [
+        {
+          "bytes": 4983007904,
+          "name": "model-00001-of-00004.safetensors"
+        },
+        {
+          "bytes": 4999836776,
+          "name": "model-00002-of-00004.safetensors"
+        },
+        {
+          "bytes": 4983067960,
+          "name": "model-00003-of-00004.safetensors"
+        },
+        {
+          "bytes": 1073741952,
+          "name": "model-00004-of-00004.safetensors"
+        }
+      ]
+    },
+    "logical_gpu_capability": [
+      7,
+      0
+    ],
+    "logical_gpu_name": "Tesla V100-SXM2-32GB",
+    "max_batch_requests": 1,
+    "max_model_len": 8192,
+    "max_num_seqs": 1,
+    "model_dir": "/root/prompt_transfer/models/hf/mistralai--Ministral-8B-Instruct-2410",
+    "model_manifest": null,
+    "model_manifest_path": null,
+    "model_manifest_sha256": null,
+    "model_name": "mistralai/Ministral-8B-Instruct-2410",
+    "request_dispatch_batch_size": 1,
+    "stop_strings": [],
+    "tokenizer_chat_template_sha256": "e4676cb56dffea7782fd3e2b577cfaf1e123537e6ef49b3ec7caa6c095c62272",
+    "tokenizer_class": "LlamaTokenizerFast",
+    "torch_cuda_version": "12.4",
+    "torch_version": "2.5.1+cu124",
+    "transformers_version": "4.46.3",
+    "vllm_version": "0.6.4"
+  },
+  "qwen2_7b": {
+    "attention_backend": "XFORMERS",
+    "backend": "hf_safetensors_vllm",
+    "classification_max_model_len": 2048,
+    "cuda_visible_devices": "1",
+    "dtype": "half",
+    "enforce_eager": true,
+    "engine_seed": 0,
+    "gpu_memory_utilization": 0.75,
+    "guided_choice": [
+      "Non-security",
+      "Security"
+    ],
+    "guided_decoding_backend": "lm-format-enforcer",
+    "local_artifact": {
+      "config_sha256": "8b9a4f6c0acf4854a2d301616d4203039c3d7972cb0a557dae98686b6c3ae4b2",
+      "expected_revision": "f2826a00ceef68f0f2b946d945ecc0477ce4450c",
+      "observed_revisions": [
+        "f2826a00ceef68f0f2b946d945ecc0477ce4450c"
+      ],
+      "revision_metadata_files": 14,
+      "tokenizer_config_sha256": "be21acaf90e7f449b7282fdef7b06516a0102476e86cbc2108e18ac071f9cc9c",
+      "total_weight_bytes": 15231271872,
+      "weight_index_sha256": "f00d17cbf433746c391ad43948613e373aa51222dbee3b0db61ffff59a74bb1a",
+      "weight_shards": [
+        {
+          "bytes": 3945426872,
+          "name": "model-00001-of-00004.safetensors"
+        },
+        {
+          "bytes": 3864726352,
+          "name": "model-00002-of-00004.safetensors"
+        },
+        {
+          "bytes": 3864726408,
+          "name": "model-00003-of-00004.safetensors"
+        },
+        {
+          "bytes": 3556392240,
+          "name": "model-00004-of-00004.safetensors"
+        }
+      ]
+    },
+    "logical_gpu_capability": [
+      7,
+      0
+    ],
+    "logical_gpu_name": "Tesla V100-SXM2-32GB",
+    "max_batch_requests": 1,
+    "max_model_len": 8192,
+    "max_num_seqs": 1,
+    "model_dir": "/root/prompt_transfer/models/hf/Qwen--Qwen2-7B-Instruct",
+    "model_manifest": null,
+    "model_manifest_path": null,
+    "model_manifest_sha256": null,
+    "model_name": "Qwen/Qwen2-7B-Instruct",
+    "request_dispatch_batch_size": 1,
+    "stop_strings": [
+      "<|im_end|>",
+      "<|endoftext|>"
+    ],
+    "tokenizer_chat_template_sha256": "793202280c0910ab26bc6eb57c8212c2417324c6d8c4efd0d10d59092ab3e3eb",
+    "tokenizer_class": "Qwen2TokenizerFast",
+    "torch_cuda_version": "12.4",
+    "torch_version": "2.5.1+cu124",
+    "transformers_version": "4.46.3",
+    "vllm_version": "0.6.4"
+  },
+  "qwen3_8b": {
+    "attention_backend": "XFORMERS",
+    "backend": "hf_safetensors_vllm",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "classification_max_model_len": 2048,
+    "cuda_visible_devices": "1",
+    "dtype": "half",
+    "enforce_eager": true,
+    "engine_seed": 0,
+    "gpu_memory_utilization": 0.75,
+    "guided_choice": [
+      "Non-security",
+      "Security"
+    ],
+    "guided_decoding_backend": "lm-format-enforcer",
+    "local_artifact": {
+      "config_sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+      "expected_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "observed_revisions": [
+        "b968826d9c46dd6066d109eabc6255188de91218"
+      ],
+      "revision_metadata_files": 15,
+      "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+      "total_weight_bytes": 16381516776,
+      "weight_index_sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+      "weight_shards": [
+        {
+          "bytes": 3996250744,
+          "name": "model-00001-of-00005.safetensors"
+        },
+        {
+          "bytes": 3993160032,
+          "name": "model-00002-of-00005.safetensors"
+        },
+        {
+          "bytes": 3959604768,
+          "name": "model-00003-of-00005.safetensors"
+        },
+        {
+          "bytes": 3187841392,
+          "name": "model-00004-of-00005.safetensors"
+        },
+        {
+          "bytes": 1244659840,
+          "name": "model-00005-of-00005.safetensors"
+        }
+      ]
+    },
+    "logical_gpu_capability": [
+      7,
+      0
+    ],
+    "logical_gpu_name": "Tesla V100-SXM2-32GB",
+    "max_batch_requests": 1,
+    "max_model_len": 8192,
+    "max_num_seqs": 1,
+    "model_dir": "/root/prompt_transfer/models/hf/Qwen--Qwen3-8B",
+    "model_manifest": null,
+    "model_manifest_path": null,
+    "model_manifest_sha256": null,
+    "model_name": "Qwen/Qwen3-8B",
+    "request_dispatch_batch_size": 1,
+    "stop_strings": [
+      "<|im_end|>",
+      "<|endoftext|>"
+    ],
+    "tokenizer_chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "tokenizer_class": "Qwen2TokenizerFast",
+    "torch_cuda_version": "12.4",
+    "torch_version": "2.6.0+cu124",
+    "transformers_version": "4.51.3",
+    "vllm_version": "0.8.5"
+  }
+}

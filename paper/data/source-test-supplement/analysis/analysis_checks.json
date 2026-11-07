@@ -1,0 +1,10 @@
+{
+  "candidate_items": 77520,
+  "candidate_score_rows": 760,
+  "complete_routes": 380,
+  "gap_rows": 180,
+  "logical_votes": 232560,
+  "rank_rows": 300,
+  "source_selection_changed": false,
+  "status": "PASS"
+}

@@ -89,7 +89,7 @@
     }
   ],
   "secret_pattern_scan": {
-    "members_scanned": 238,
+    "members_scanned": 239,
     "findings": []
   },
   "largest_file_bytes": 6348561,

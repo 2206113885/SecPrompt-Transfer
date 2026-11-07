@@ -1,11 +1,12 @@
-# Before public release and submission
+# Release and submission checklist
 
 - [x] Create a new private repository, without importing unrelated Git history.
 - [x] Preserve original experiment files and export actual recorded predictions/votes.
 - [x] Execute offline score/statistical reproduction and asset checks; results are in `verification/`.
 - [ ] Authors review the package and the verification records.
-- [ ] Authors approve the release contents and the license for original research code.
-- [ ] Confirm third-party attribution and redistribution terms, particularly GitReq v3 (live Figshare access was blocked during packaging; the archived audit records CC BY 4.0).
+- [x] The repository owner authorized renaming the repository to `SecPrompt-Transfer` and making it public on 7 November 2026.
+- [ ] Select a license for original research code, if broader reuse permissions are to be granted.
+- [x] Retain third-party attribution and existing component licenses. The archived GitReq v3 record specifies CC BY 4.0; live Figshare access returned HTTP 403 during the release check.
 - [ ] Confirm author names, funding, competing interests and contribution statements in the manuscript.
 - [ ] Make the repository public before submitting the public-availability statement.
 - [ ] Test the repository link while signed out.

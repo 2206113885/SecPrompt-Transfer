@@ -1,10 +1,12 @@
-# Prompt Transfer — replication package
+# SecPrompt-Transfer
 
 Materials for **Do Automatically Optimized Security-Requirement Prompts Transfer Across Datasets and Models?**
 
 Yizheng He, Zhiwei Fei, and Jidong Ge — Nanjing University.
 
-**Private author-review snapshot, 7 November 2026.** The repository is not yet a public release. The manuscript's availability statement is prepared for submission; make the repository public and complete the release checklist before using that statement in a submitted paper.
+**Research data and code, 7 November 2026.** SecPrompt-Transfer studies whether automatically optimized security-requirement prompts transfer across datasets and deployment models. The repository accompanies the manuscript above; publication details will be added when available.
+
+Repository: [2206113885/SecPrompt-Transfer](https://github.com/2206113885/SecPrompt-Transfer).
 
 ## What this package reproduces
 
@@ -90,10 +92,10 @@ Run these commands in the environment installed above. They operate on copied ev
 - **BT-APE:** Zadenoori et al., [paper](https://doi.org/10.48550/arXiv.2607.00427). The locally preserved author package was consulted for its installation, execution, configuration and test organization; its MIT notice is retained in `LICENSES/BTAPE-MIT.txt`. The historical GitHub link returned 404 when this release was assembled.
 - **PE2:** Ye et al., [author repository](https://github.com/INK-USC/PE2). Its separation of environment, data/preprocessing and runnable experiment examples informed the package organization. This study's PE2 is the requirements-classification adaptation described in the manuscript, not an assertion that the original PE2 implementation was run unchanged.
 
-See `LICENSES/README.md` for component-specific rights. This private review snapshot does not assign a new blanket license to third-party materials. Before public release, confirm the original-code license and the current dataset terms, then archive a versioned release if a persistent identifier is desired. No archive DOI has been assigned by this package.
+See `LICENSES/README.md` for component-specific rights. Existing dataset and third-party code licenses are retained; no blanket license has been assigned to the authors' original code. No archive DOI has been assigned.
 
 ## Scientific scope
 
 The historical source winners, candidate text, source splits and target interfaces are unchanged. Source-test supplement scores refer to the original 204-row partitions. RQ2 reports candidate-pool ranking and selection diagnostics; it is not a new prompt optimizer. RQ3 uses one-vote deployment after the recorded consistency checks, while RQ1/RQ2 and both supplements retain three votes. Read `docs/DATA_DICTIONARY.md` before combining these stages.
 
-Please cite the manuscript and the original datasets and methods. `CITATION.cff` describes this unpublished replication snapshot; update publication metadata after acceptance.
+Please cite the manuscript and the original datasets and methods. `CITATION.cff` identifies this research repository; the manuscript's publication metadata will be added after acceptance.

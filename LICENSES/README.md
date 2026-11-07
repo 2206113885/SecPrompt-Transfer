@@ -1,9 +1,9 @@
 # Licenses and attribution
 
-This is a private author-review deposit. The authors have not yet selected a blanket public license for their original code and derived research artifacts. Confirm that choice before making a public release. No rights beyond existing component licenses are asserted here.
+This repository contains research data, code and derived artifacts. The authors have not assigned a blanket license to their original code and derived research artifacts. Existing component licenses remain in force; public access does not replace those licenses or grant additional permissions.
 
 - SecReq: CC BY 4.0, [original record](https://doi.org/10.5281/zenodo.4530183). The study's 510-row CSV is a derived version; label and row order are preserved from the experiment.
-- GitReq v3: CC BY 4.0 according to the recorded official-dataset audit, [original record](https://doi.org/10.6084/m9.figshare.31669477.v3). The enriched CSV adds identifiers, binary labels and repository metadata. The authors' original text/category/issue attribution is retained. Live Figshare access was denied during packaging, so the archived license observation must be reconfirmed before public release.
+- GitReq v3: CC BY 4.0 according to the recorded official-dataset audit and `data/datasets/gitreq_v3_manifest.json`, [original record](https://doi.org/10.6084/m9.figshare.31669477.v3). The enriched CSV adds identifiers, binary labels and repository metadata. The authors' original text/category/issue attribution is retained. Live Figshare access returned HTTP 403 on 7 November 2026; this attribution relies on the archived dataset record, not a successful live recheck.
 - BT-APE author package and portions derived from it: retain the original MIT notice in `BTAPE-MIT.txt`.
 - Model weights and tokenizers: not distributed. Obtain them from their original providers under their respective terms; some models require access approval.
 - Third-party paper PDFs, journal LaTeX classes and prior chat/SSH histories: not distributed.

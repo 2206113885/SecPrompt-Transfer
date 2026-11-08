@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the accompanying manuscript and the original datasets and methods. Manuscript publication metadata will be added when available."
+message: 'Please cite the accompanying manuscript, "How Well Do Automatically Optimized Prompts Transfer? An Empirical Study of Security Requirement Classification", and the original datasets and methods. Manuscript publication metadata will be added when available.'
 type: software
 title: "SecPrompt-Transfer: Security-Requirement Prompt Transfer Across Datasets and Models"
 authors:

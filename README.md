@@ -1,6 +1,6 @@
 # SecPrompt-Transfer
 
-Materials for **Do Automatically Optimized Security-Requirement Prompts Transfer Across Datasets and Models?**
+Materials for **How Well Do Automatically Optimized Prompts Transfer? An Empirical Study of Security Requirement Classification**
 
 Yizheng He, Zhiwei Fei, and Jidong Ge — Nanjing University.
 

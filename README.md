@@ -2,7 +2,11 @@
 
 Materials for **How Well Do Automatically Optimized Prompts Transfer? An Empirical Study of Security Requirement Classification**
 
-Yizheng He, Zhiwei Fei, and Jidong Ge — Nanjing University.
+Yizheng He¹, Zhiwei Fei¹, Jidong Ge¹, and Liguo Huang².
+
+¹ National Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China.
+
+² Department of Computer Science, Southern Methodist University, Dallas, USA.
 
 **Research data and code, 7 November 2026.** SecPrompt-Transfer studies whether automatically optimized security-requirement prompts transfer across datasets and deployment models. The repository accompanies the manuscript above; publication details will be added when available.
 

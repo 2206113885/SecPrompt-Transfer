@@ -5,10 +5,20 @@ title: "SecPrompt-Transfer: Security-Requirement Prompt Transfer Across Datasets
 authors:
   - family-names: He
     given-names: Yizheng
+    affiliation: "National Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China"
+    orcid: "https://orcid.org/0009-0003-2630-8986"
   - family-names: Fei
     given-names: Zhiwei
+    affiliation: "National Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China"
+    orcid: "https://orcid.org/0009-0009-3166-8525"
   - family-names: Ge
     given-names: Jidong
+    affiliation: "National Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China"
+    orcid: "https://orcid.org/0000-0003-1773-0942"
+  - family-names: Huang
+    given-names: Liguo
+    affiliation: "Department of Computer Science, Southern Methodist University, Dallas, USA"
+    orcid: "https://orcid.org/0000-0001-7790-0195"
 version: "0.1.0"
 date-released: "2026-11-07"
 repository-code: "https://github.com/2206113885/SecPrompt-Transfer"

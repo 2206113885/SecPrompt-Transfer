@@ -46,7 +46,7 @@ PDF metadata can differ between renders even when the data and geometry agree. T
 
 `inference/` contains the retained research implementation for source optimization, original-model deployment, cross-model deployment and the source-test supplement, plus the historical prompt-template snapshots accompanying the audit. The supplied JSON configurations preserve the original machine paths as provenance. **Do not run them unmodified on a new machine.**
 
-For a new inference run, install the model/provider dependencies separately, obtain weights under their original licenses, change only storage/resource paths in a new configuration, and check the per-route runtime contracts against `data/rq2/route_manifest.jsonl` or `data/rq3/route_manifest.jsonl`. These contracts record the model revisions, tokenizer/chat-template fingerprints, wrappers, stops, context limits, decoding and vote policy. The three origin models use V100/FP16 vLLM 0.6.4; later deployment models have their own recorded configurations. Do not impose one software stack or wrapper on all seven models.
+For a new inference run, install the model/provider dependencies separately, obtain weights under their original licenses, change only storage/resource paths in a new configuration, and check the per-route runtime contracts against `data/rq2/route_manifest.jsonl` or `data/rq3/route_manifest.jsonl`. These contracts record the model revisions, tokenizer/chat-template fingerprints, wrappers, stops, context limits, decoding and vote policy.
 
 Reference import path (without starting a run):
 

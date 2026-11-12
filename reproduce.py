@@ -83,7 +83,7 @@ def basic_check():
     a = arrays['rq2']; routes = manifests['rq2']
     lookup = {(r['model'],r['prompt_sha256']):i for i,r in enumerate(routes)}
     target_scores = {v:math.scores(y[m], a['predictions'][:,m]) for v,m in masks.items()}
-    expected = pd.read_csv(ROOT/'paper/data/rq2/candidate_scores_audited.csv')
+    expected = pd.read_csv(ROOT/'analysis/rq2/data/original_tables/candidate_scores.csv')
     for v, rows in expected.groupby('view'):
         idx = [lookup[(r.model,r.prompt_sha256)] for r in rows.itertuples()]
         for metric, values in target_scores[v].items():
@@ -191,6 +191,11 @@ def full_analysis():
         dest=OUT/rq
         if not dest.exists():
             shutil.copytree(ROOT/'analysis'/rq,dest)
+        # Keep one canonical copy of the shared datasets in the repository.
+        shared = {'source_30cells_analysis_slim_v1.zip': ROOT/'data/source/source_30cells_analysis_slim_v1.zip',
+                  'gitreq_enriched_v3.csv': ROOT/'data/datasets/gitreq_enriched_v3.csv'}
+        for name, origin in shared.items():
+            shutil.copy2(origin, dest/'data'/name)
         (dest/'tables').mkdir(exist_ok=True)
         subprocess.run([sys.executable,str(dest/'code/analyze.py')],check=True)
         subprocess.run([sys.executable,str(dest/'code/test_analysis.py')],check=True)

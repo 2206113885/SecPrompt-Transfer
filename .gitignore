@@ -3,6 +3,15 @@ __pycache__/
 *.pyc
 .DS_Store
 reproduced/
+verification/
+paper/review_*/
+paper/figures/*.pdf
+paper/figures/*.png
+paper/figures/*.svg
+paper/figures/*_audit*.json
+paper/figures/*_placements.csv
+paper/research/*_audit.json
+paper/research/*_checks.json
 *.log.tmp
 models/
 .env

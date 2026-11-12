@@ -1,4 +1,0 @@
-model,cell_unique_candidates,gross_cell_items,endpoint_reused_cell_items,pending_cell_items,pending_cell_votes,unique_request_items_after_cross_cell_endpoint_screen,unique_request_items_after_validation_screen,conservative_cell_inference_hours,cross_cell_screen_inference_hours,validation_screen_inference_hours
-llama3_8b,140,28560,3672,24888,74664,24648,24307,3.31847692613963,3.294446009873562,3.2603161385350035
-qwen2_7b,106,21624,3672,17952,53856,17952,17952,1.823644608643148,1.823644608643148,1.823644608643148
-granite3_2_8b,134,27336,4080,23256,69768,23256,23256,5.157777329711296,5.157777329711296,5.157777329711296

@@ -41,16 +41,13 @@ def f1(gold, pred):
             (2*tn/(2*tn+fp+fn) if 2*tn+fp+fn else 0))/2
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('--project-data',type=Path,default=ROOT.parent)
+    repository = ROOT.parent if (ROOT.parent/'data/datasets').is_dir() else ROOT.parents[1]
+    ap=argparse.ArgumentParser(); ap.add_argument('--project-data',type=Path,default=repository)
     args=ap.parse_args(); b=args.project_data
-    paths={'source':b/'RQ1_SQJ_Analysis_2026-10-21/data/source_30cells_analysis_slim_v1.zip',
-           'vectors':b/'RQ2_SQJ_Analysis_2026-10-21/data/candidate_prediction_vectors.jsonl.gz',
-           'gitreq':b/'RQ2_SQJ_Analysis_2026-10-21/data/gitreq_enriched_v3.csv',
-           'scores':ROOT/'data/rq2/candidate_scores_audited.csv'}
-    # Portable review exports take precedence over the original sibling folders.
-    for key in ['source','vectors','gitreq']:
-        bundled=OUT/'inputs'/paths[key].name
-        if bundled.is_file(): paths[key]=bundled
+    paths={'source':b/'data/source/source_30cells_analysis_slim_v1.zip',
+           'vectors':b/'analysis/rq2/data/candidate_prediction_vectors.jsonl.gz',
+           'gitreq':b/'data/datasets/gitreq_enriched_v3.csv',
+           'scores':b/'analysis/rq2/data/original_tables/candidate_scores.csv'}
     OUT.mkdir(exist_ok=True); (OUT/'prompts').mkdir(exist_ok=True)
     z=zipfile.ZipFile(paths['source'])
     load=lambda n:[json.loads(x) for x in z.read(n).splitlines()]

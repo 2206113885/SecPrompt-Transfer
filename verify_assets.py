@@ -9,6 +9,7 @@ ROOT=Path(__file__).resolve().parent
 dest=ROOT/'reproduced/paper'
 shutil.copytree(ROOT/'paper',dest,dirs_exist_ok=True)
 (dest/'research').mkdir(exist_ok=True)
+(dest/'tables').mkdir(exist_ok=True)
 commands=['tools/review_supplements.py','tools/test_review_supplements.py',
           'tools/build_source_test_reference.py','tools/build_concise_definition_table.py',
           'tools/build_results_assets.py','figures/build_rq3_figures.py',

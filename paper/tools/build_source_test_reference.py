@@ -34,7 +34,8 @@ def main():
     # Recheck each target score and selected/p0 flag against the independently
     # audited RQ2 inputs already present in the manuscript before this revision.
     old={ (r['cell_id'],r['prompt_sha256'],r['view']):r
-          for r in rows(ROOT/'data/rq2/candidate_scores_audited.csv')
+          for r in rows((ROOT.parent if (ROOT.parent/'analysis').is_dir() else ROOT.parents[1])
+                        /'analysis/rq2/data/original_tables/candidate_scores.csv')
           if r['candidate_set_type']=='unique_all' and r['view'] in ('T_All','T_NFR') }
     assert len(old)==760
     for r in cs:

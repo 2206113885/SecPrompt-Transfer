@@ -24,9 +24,9 @@ parser.add_argument('--only', nargs='+', choices=['rq1_transfer_gain', 'rq1_secu
                     'rq2_rank_transfer', 'rq2_gap_range', 'rq2_target_selection'],
                     help='Write only the named figures; leave tables and full-build checks unchanged.')
 ONLY = set(parser.parse_args().only or [])
-NAMES = {'llama3_8b': 'Llama', 'qwen2_7b': 'Qwen2', 'granite3_2_8b': 'Granite'}
+NAMES = {'llama3_8b': 'Llama-3', 'qwen2_7b': 'Qwen2', 'granite3_2_8b': 'Granite-3.2'}
 GROUPS = [(m, o) for m in NAMES for o in ['pe2', 'btape']]
-LABELS = [NAMES[m] + ' / ' + ('PE2' if o == 'pe2' else 'BT-APE') for m, o in GROUPS]
+LABELS = [NAMES[m] + '\n' + ('PE2' if o == 'pe2' else 'BT-APE') for m, o in GROUPS]
 VIEWS = ['T_All', 'T_NFR']
 DISPLAY = [r'$T_{\mathrm{All}}$', r'$T_{\mathrm{NFR}}$']
 BLUE, RED, GRAY = style.PALETTE['blue'], style.PALETTE['red'], '#969696'
@@ -87,7 +87,7 @@ def group_axes(ax, xlabel, labels=True):
     ax.set_yticks([i * 31 + 15 for i in range(6)], LABELS)
     ax.tick_params(axis='y', labelleft=labels)
     if labels:
-        ax.set_ylabel('Model / optimizer')
+        ax.set_ylabel('Origin / optimizer')
     ax.set_ylim(186, -1)
     ax.set_xlabel(xlabel)
     ax.grid(axis='y', visible=False)

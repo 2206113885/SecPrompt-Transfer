@@ -55,7 +55,7 @@ def main():
     mpl.rcParams.update({"font.size": 8, "axes.labelsize": 8,
                          "xtick.labelsize": 8, "ytick.labelsize": 8,
                          "legend.fontsize": 8, "savefig.dpi": 300})
-    fig = plt.figure(figsize=(WIDTH, 3.82))
+    fig = plt.figure(figsize=(WIDTH, 4.15))
     ax = fig.add_axes([.235, .405, .745, .385])
     base_ax = fig.add_axes([.235, .815, .745, .075])
     bar_ax = fig.add_axes([.37, .267, .50, .030])

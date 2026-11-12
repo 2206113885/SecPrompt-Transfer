@@ -25,12 +25,14 @@ mpl.rcParams.update({'font.size': 8, 'axes.labelsize': 8, 'xtick.labelsize': 8,
                      'ytick.labelsize': 8, 'legend.fontsize': 8, 'savefig.dpi': 300})
 MODELS = ['llama3_8b','qwen2_7b','granite3_2_8b','falcon3_7b',
           'ministral_8b','granite3_3_8b','qwen3_8b']
-DISPLAY = ['Llama-3-8B', 'Qwen2-7B', 'Granite-3.2-8B', 'Falcon-3-7B',
+DISPLAY = ['Llama-3-8B', 'Qwen2-7B', 'Granite-3.2-8B', 'Falcon3-7B',
            'Ministral-8B', 'Granite-3.3-8B', 'Qwen3-8B']
 SHORT = ['L3', 'Q2', 'G32']
 FAMILIES = [(p,o) for p in MODELS[:3] for o in ('pe2','btape')]
 LABELS = [SHORT[MODELS.index(p)] + ' / ' + ('PE2' if o=='pe2' else 'BT-APE') for p,o in FAMILIES]
 BLUE = style.PALETTE['blue']
+ADVERSE = style.PALETTE['red']
+NEUTRAL = '#555555'
 
 def read(name):
     with (DATA / name).open() as f:
@@ -144,8 +146,13 @@ def behavior():
             for fi,(p,o) in enumerate(FAMILIES):
                 y=offset+fi;ys.append(y);labels.append(LABELS[fi])
                 r=G['T_All',d,p,o,metric]
+                gain=float(r['mean_gain_pp'])
+                favorable = gain > 1e-12 if metric=='security_recall' else gain < -1e-12
+                adverse = gain < -1e-12 if metric=='security_recall' else gain > 1e-12
+                color = BLUE if favorable else ADVERSE if adverse else NEUTRAL
                 ax.plot([float(r['ci_low_pp']),float(r['ci_high_pp'])],[y,y],c='black',lw=1)
-                ax.scatter(float(r['mean_gain_pp']),y,c=BLUE,marker='D',s=18,zorder=5)
+                ax.scatter(gain,y,facecolor=color,edgecolor=color if favorable else 'black',
+                           marker='D',s=18,linewidth=.45,zorder=5)
         ax.set_yticks(ys,labels);ax.tick_params(axis='y',length=0,labelleft=j==0)
         ax.set_ylim(30.0,-1.8);ax.set_xlabel(xlabel)
         ax.set_ylabel('Prompt producer / optimizer' if j==0 else '')
@@ -153,9 +160,10 @@ def behavior():
         ax.axvline(0,c='#666666',ls='--',lw=.7,zorder=1)
     axes[0].set_xlim(-12,48);axes[0].set_xticks([-10,0,20,40])
     axes[1].set_xlim(-8.3,3.1);axes[1].set_xticks([-8,-4,0])
-    fig.legend(handles=[Line2D([],[],marker='D',c=BLUE,ls='',label='Mean of five source splits'),
+    fig.legend(handles=[Line2D([],[],marker='D',c=BLUE,ls='',label='Favorable mean'),
+                        Line2D([],[],marker='D',c=ADVERSE,ls='',label='Adverse mean'),
                         Line2D([],[],c='black',lw=1,label='Pointwise 95% CI')],
-               loc='upper center',bbox_to_anchor=(.53,1),ncol=1)
+               loc='upper center',bbox_to_anchor=(.53,1),ncol=2)
     style.panel_labels(axes)
     # The shared y coordinate is named on the left, as in the existing paper.
     export(fig,'rq3_error_tradeoffs')

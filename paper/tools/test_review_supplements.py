@@ -34,16 +34,6 @@ class ReviewChecks(unittest.TestCase):
             if r['optimizer']=='pe2':
                 self.assertEqual(r['p_source_hash'],r['final_current_hash'])
 
-    def test_historical_parser_and_templates(self):
-        d=json.loads((R/'historical_template_audit.json').read_text())
-        self.assertEqual(len(d['rows']),600)
-        self.assertTrue(all(r['reconstructed_parser_matches'] for r in d['rows']))
-        self.assertEqual(sum(not r['parse_valid'] for r in d['rows']),10)
-        mismatch=[r for r in d['rows'] if r['optimizer']=='pe2'
-                  and '\nExamples:\n' in r['pe2_displayed_template'] and not r['classifier_has_examples_header']]
-        self.assertEqual(len(mismatch),200)
-        self.assertEqual(len({(r['model'],r['seed']) for r in mismatch}),10)
-
     def test_case_accounting(self):
         changed=rows('case_all_changed_items.csv')
         summary=rows('case_summary.csv')

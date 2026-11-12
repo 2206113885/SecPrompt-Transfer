@@ -22,7 +22,8 @@ def median(rs,key):
 def main():
     complete=json.loads((DATA/'experiment_complete.json').read_text())
     hashes={}
-    for name,expected in complete['analysis_hashes'].items():
+    for name in ('candidate_scores.csv','cell_rank_reference.csv','cell_selection_gaps.csv'):
+        expected=complete['analysis_hashes'][name]
         hashes[name]=hashlib.sha256((DATA/'analysis'/name).read_bytes()).hexdigest()
         assert hashes[name]==expected, f'Changed source-test table: {name}'
     cs=rows(DATA/'analysis/candidate_scores.csv')

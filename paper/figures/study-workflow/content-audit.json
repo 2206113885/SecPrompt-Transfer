@@ -1,0 +1,58 @@
+{
+  "unique_cell_candidate_pairs": 380,
+  "candidate_pools": 30,
+  "source_model_ids": [
+    "granite3_2_8b",
+    "llama3_8b",
+    "qwen2_7b"
+  ],
+  "optimizer_ids": [
+    "btape",
+    "pe2"
+  ],
+  "seeds": [
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "iterations_per_cell": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  ],
+  "gitreq_full": 6302,
+  "gitreq_nfr": 5771,
+  "target_or_auxiliary_feedback_to_source": {
+    "gitreq": [],
+    "rq1": [],
+    "rq2": [],
+    "rq3": [],
+    "target-selection": [],
+    "source-reference": []
+  },
+  "optimization_definition_only": true,
+  "model_weights_fixed": true,
+  "experiments_rerun": false
+}

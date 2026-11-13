@@ -4,6 +4,10 @@ Replication package for **Reusing Automatically Optimized Prompts Across Dataset
 
 Yizheng He, Zhiwei Fei, Jidong Ge, and Liguo Huang.
 
+## Study workflow (Figure 1)
+
+The redesigned study workflow is available as a [vector PDF](paper/figures/study-workflow/Fig1-study-workflow.pdf), [SVG](paper/figures/study-workflow/Fig1-study-workflow.svg), and [PNG preview](paper/figures/study-workflow/Fig1-study-workflow.png). The [editable Draw.io source](paper/figures/study-workflow/Fig1-study-workflow.drawio), canonical YAML, and rebuild instructions are in [paper/figures/study-workflow](paper/figures/study-workflow/README.md).
+
 ## Reproduce the results
 
 The package includes the SecReq and GitReq study datasets, all frozen prompt candidates, saved prediction votes, analysis code, and figure-generation scripts. The statistical results can be reproduced on a CPU:

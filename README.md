@@ -2,63 +2,42 @@
 
 Replication package for **Reusing Automatically Optimized Prompts Across Datasets and Models: An Empirical Study of Security Requirement Classification**.
 
-Yizheng He, Zhiwei Fei, Jidong Ge, and Liguo Huang.
+**Paper version:** [v1.0.0](https://github.com/2206113885/SecPrompt-Transfer/releases/tag/v1.0.0). Use this release when reproducing the submitted manuscript; `main` may change.
 
-## Study workflow (Figure 1)
+## Reproduce
 
-The redesigned study workflow is available as a [vector PDF](paper/figures/study-workflow/Fig1-study-workflow.pdf), [SVG](paper/figures/study-workflow/Fig1-study-workflow.svg), and [PNG preview](paper/figures/study-workflow/Fig1-study-workflow.png). The [editable Draw.io source](paper/figures/study-workflow/Fig1-study-workflow.drawio), canonical YAML, and rebuild instructions are in [paper/figures/study-workflow](paper/figures/study-workflow/README.md).
-
-## Reproduce the results
-
-The package includes the SecReq and GitReq study datasets, all frozen prompt candidates, saved prediction votes, analysis code, and figure-generation scripts. The statistical results can be reproduced on a CPU:
+Python 3.12; CPU only. The commands use frozen predictions and make no model calls.
 
 ```bash
 uv run --python 3.12 --isolated --no-project --with-requirements requirements.txt python reproduce.py --check
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 uv run --python 3.12 --isolated --no-project --with-requirements requirements.txt python reproduce.py --full
+uv run --python 3.12 --isolated --no-project --with-requirements requirements.txt python reproduce.py --all
 ```
 
-`--check` verifies the datasets, prompt-selection rule, recorded votes, classification scores, and agreement between the RQ1 endpoints and RQ2 candidate routes. `--full` regenerates the RQ1–RQ3 statistical tables and intervals. Results are written to `reproduced/`.
+Alternatively, install `requirements.txt` in a Python 3.12 virtual environment and run the same Python commands.
 
-To regenerate the manuscript figures and supplementary tables:
+- `--check`: verify file hashes, recorded votes, source prompt selection, classification scores, candidate ranks/gaps on the source test set, and SecReq duplicate-text sensitivity.
+- `--all`: also recompute RQ1–RQ3 statistical tables and bootstrap intervals, compare them against frozen reference tables (absolute tolerance `1e-12`), and regenerate the manuscript tables and figures.
 
-```bash
-uv run --python 3.12 --isolated --no-project --with-requirements requirements.txt python verify_assets.py
-```
-
-The generated assets are written to `reproduced/paper/`. The saved vote labels and predictions are the inputs to these commands; no model download is needed for offline reproduction. `inference/` contains the source-optimization and deployment implementation for a new model run.
-
-## Updated RQ3 figures
-
-[Figure files and rebuild instructions](paper/figures/README-rq3.md) include the
-current vector PDF/SVG and PNG versions of Figures 8--10, with consistent
-typography and explicit checks for marker overlap. Statistical inputs and
-interval estimates are unchanged.
-
-## SecReq duplicate-text sensitivity
-
-The [duplicate-text supplement](analysis/source_duplicates/README.md) quantifies
-text overlap in the original source partitions and rescores the frozen predictions
-after excluding that overlap. It includes per-cell results, a standalone
-reproduction script, and Figure 11 in vector PDF/SVG and PNG. This post hoc
-analysis retains the original candidate pools and historical selected definitions.
+Outputs appear in `results/verification.json`, `results/tables/`, `results/figures/`, `results/source_test/` and `results/source_duplicates/`. Temporary expanded inputs are removed after execution. The source-test and duplicate analyses are post hoc diagnostics; the historical prompts and predictions remain fixed. A successful check does not establish that newly generated model outputs will be identical.
 
 ## Contents
 
-| Directory | Contents |
+| Path | Purpose |
 | --- | --- |
-| `data/` | SecReq and GitReq, 30 frozen source trajectories, split IDs, candidate-route manifests, prediction arrays and vote labels |
-| `analysis/` | RQ1, RQ2 and RQ3 statistical analyses and their comparison tables |
-| `paper/` | Figure and supplementary-table generators with the summary data they use |
-| `inference/` | Source optimization, target deployment, configurations and tests |
-| `docs/DATA_DICTIONARY.md` | Prediction-array fields, labels and evaluation views |
+| `data/` | Datasets, split IDs, candidate texts, saved predictions/votes and run provenance; [formats](data/README.md) |
+| `src/analysis/` | RQ1–RQ3 statistical engines and duplicate-text sensitivity |
+| `src/paper/` | Table and figure generators, sharing `src/figure_style.py` |
+| `src/workflow/` | Editable Figure 1 (`.drawio`) and its vector PDF |
+| `src/inference/` | Original optimization/deployment implementation, configurations and protocol tests; [usage](src/inference/README.md) |
+| `CITATION.cff`, `LICENSES/` | Citation metadata and component attribution |
 
-`data/source/source_30cells_analysis_slim_v1.zip` contains all 630 source candidate occurrences and their validation predictions. The deduplicated target predictions are stored once per route in `data/rq2/` and `data/rq3/`; the route manifests map them back to the experimental comparisons.
+The package stores each target label/ID vector once per stage and compresses text inputs losslessly. `data/reference.zip` contains deduplicated comparison tables and auxiliary prediction records required by the analysis engines. The entry point restores their original paths automatically. Generated previews, duplicate styles, unused configurations and intermediate revision materials are excluded. Figures use the recorded style with installed font fallbacks; numerical checks do not compare PDF bytes.
 
-## Data sources
+## Attribution
 
-- SecReq: Knauss et al., [Zenodo](https://doi.org/10.5281/zenodo.4530183).
-- GitReq v3: Kamal, Kabir and Islam, [Figshare](https://doi.org/10.6084/m9.figshare.31669477.v3).
-- BT-APE: Zadenoori et al., [paper](https://doi.org/10.48550/arXiv.2607.00427).
-- PE2: Ye et al., [code](https://github.com/INK-USC/PE2).
+- SecReq: [original dataset](https://doi.org/10.5281/zenodo.4530183).
+- GitReq v3: [original dataset](https://doi.org/10.6084/m9.figshare.31669477.v3).
+- PE2: [original implementation](https://github.com/INK-USC/PE2).
+- BT-APE: [original paper](https://doi.org/10.48550/arXiv.2607.00427).
 
-Third-party notices are in `LICENSES/`. Please cite the paper and the original datasets when using this package.
+Please cite the accompanying paper, this version and the original datasets/methods. Component terms are recorded in [LICENSES](LICENSES/README.md); no blanket license is asserted for the authors' original code.

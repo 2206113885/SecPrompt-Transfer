@@ -1,3 +1,0 @@
-Security: Requirements that constrain how a system prevents, detects, or recovers from security threats to its assets and enforces security policies.
-
-Non-security: Requirements governing functionality or other quality properties whose purpose is not to address security threats or enforce security policies.

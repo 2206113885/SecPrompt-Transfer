@@ -2,7 +2,7 @@
 
 Replication package for **Reusing Automatically Optimized Prompts Across Datasets and Models: An Empirical Study of Security Requirement Classification**.
 
-**Paper version:** [v1.0.0](https://github.com/2206113885/SecPrompt-Transfer/releases/tag/v1.0.0). Use this release when reproducing the submitted manuscript; `main` may change.
+**Paper version:** [v1.0.1](https://github.com/2206113885/SecPrompt-Transfer/releases/tag/v1.0.1). Use this release when reproducing the submitted manuscript; `main` may change. This documentation update explains the auxiliary normalized gap in [data formats](data/README.md); data, code and frozen results are identical to v1.0.0.
 
 ## Reproduce
 

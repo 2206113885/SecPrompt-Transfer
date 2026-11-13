@@ -17,6 +17,8 @@ Large CSV/JSON/JSONL inputs use lossless XZ compression, readable with Python's 
 
 `reference.zip` stores comparison tables and paired/cross-validation prediction records. Its `manifest.json` maps each original path to a stored member, content SHA-256 and original encoding; byte-identical tables share a member. The grouped target folds are under the manifest path `analysis/rq2/data/original_tables/target_group_folds.csv`. The reproduction command restores the required layout automatically.
 
+In the archived table `analysis/rq2/data/original_tables/cell_selection_gap.csv`, `selection_gap_pp` is the pool's maximum target macro-F1 minus the source-selected prompt's score, and `target_range_pp` is the maximum minus the minimum, both in percentage points. For each cell and target view, `normalized_gap` is their ratio, `selection_gap_pp / target_range_pp`. This dimensionless auxiliary metric is missing when the range is zero; the analysis treats ranges at or below `1e-12` percentage points as zero. The manuscript reports the absolute gap and range.
+
 SecReq split seeds are 40–44 (five repeated splits). GitReq has 6,302 rows; its NFR view has 5,771. Both views use the same saved predictions and retain all 1,646 Security rows. No target labels participate in source optimization or historical prompt selection. Target-supervised reselection is a separate analytical comparator.
 
 Some historical source metadata fields are null; these have not been filled with inferred provenance. Historical template code and final inference configurations are retained in `src/inference/`.

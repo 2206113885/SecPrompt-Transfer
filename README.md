@@ -27,6 +27,14 @@ uv run --python 3.12 --isolated --no-project --with-requirements requirements.tx
 
 The generated assets are written to `reproduced/paper/`. The saved vote labels and predictions are the inputs to these commands; no model download is needed for offline reproduction. `inference/` contains the source-optimization and deployment implementation for a new model run.
 
+## SecReq duplicate-text sensitivity
+
+The [duplicate-text supplement](analysis/source_duplicates/README.md) quantifies
+text overlap in the original source partitions and rescores the frozen predictions
+after excluding that overlap. It includes per-cell results, a standalone
+reproduction script, and Figure 11 in vector PDF/SVG and PNG. This post hoc
+analysis retains the original candidate pools and historical selected definitions.
+
 ## Contents
 
 | Directory | Contents |

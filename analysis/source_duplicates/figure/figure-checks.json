@@ -1,0 +1,13 @@
+{
+  "issues": [],
+  "printed_width_inches": 5.147364051473641,
+  "matplotlib_version": "3.11.2",
+  "numpy_version": "2.5.4",
+  "font": "Helvetica Neue",
+  "plotted_cell_values": 150,
+  "summary_matches_audit": true,
+  "input_sha256": {
+    "cell-test-sensitivity.csv": "471d7904828e924bddc056f101d4110a2f88733ea527083ebe62cb7c79e601cc",
+    "audit-results.json": "ad48d378671e1df4f8077c68dae2c5c81272dfbf02e6b0693772187b9262b55c"
+  }
+}

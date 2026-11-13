@@ -1,6 +1,6 @@
 # SecPrompt-Transfer
 
-Replication package for **How Well Do Automatically Optimized Prompts Transfer? An Empirical Study of Security Requirement Classification**.
+Replication package for **Reusing Automatically Optimized Prompts Across Datasets and Models: An Empirical Study of Security Requirement Classification**.
 
 Yizheng He, Zhiwei Fei, Jidong Ge, and Liguo Huang.
 

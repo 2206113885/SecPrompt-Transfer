@@ -1,11 +1,25 @@
 {
   "issues": [],
   "printed_width_inches": 5.147364051473641,
+  "printed_height_inches": 6.324999999999999,
   "matplotlib_version": "3.11.2",
   "numpy_version": "2.5.4",
   "font": "Helvetica Neue",
   "plotted_cell_values": 150,
   "summary_matches_audit": true,
+  "marker_geometry_checks": {
+    "a": {
+      "minimum_marker_box_clearance_pt": 0.7583426132259907,
+      "cell_markers": 60,
+      "summary_markers": 2
+    },
+    "b": {
+      "minimum_marker_box_clearance_pt": 0.7583426132260191,
+      "cell_markers": 90,
+      "summary_markers": 3
+    }
+  },
+  "packing": "Only categorical y positions change; x values are exact.",
   "input_sha256": {
     "cell-test-sensitivity.csv": "471d7904828e924bddc056f101d4110a2f88733ea527083ebe62cb7c79e601cc",
     "audit-results.json": "ad48d378671e1df4f8077c68dae2c5c81272dfbf02e6b0693772187b9262b55c"

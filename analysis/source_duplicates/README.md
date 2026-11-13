@@ -54,6 +54,14 @@ machine. The figure shows individual cells and descriptive summaries; it does
 not treat the five overlapping splits as independent replicates or add
 confidence intervals.
 
+Figure 11 uses two stacked horizontal panels. Within each scoring group,
+summary diamonds occupy a separate row above the cell markers and their values
+appear in the right column. Deterministic vertical packing separates equal or
+nearby cell values; numerical horizontal positions are unchanged.
+`figure/point-placements.csv` records the placement of all 150 cell markers.
+`figure/figure-checks.json` includes checks of actual marker bounds and edge
+strokes, in addition to text collisions, clipping, and summary agreement.
+
 ## Matching and sensitivity checks
 
 Texts are normalized with Unicode NFC, case folding, and collapsed whitespace.

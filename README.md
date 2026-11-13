@@ -27,6 +27,13 @@ uv run --python 3.12 --isolated --no-project --with-requirements requirements.tx
 
 The generated assets are written to `reproduced/paper/`. The saved vote labels and predictions are the inputs to these commands; no model download is needed for offline reproduction. `inference/` contains the source-optimization and deployment implementation for a new model run.
 
+## Updated RQ3 figures
+
+[Figure files and rebuild instructions](paper/figures/README-rq3.md) include the
+current vector PDF/SVG and PNG versions of Figures 8--10, with consistent
+typography and explicit checks for marker overlap. Statistical inputs and
+interval estimates are unchanged.
+
 ## SecReq duplicate-text sensitivity
 
 The [duplicate-text supplement](analysis/source_duplicates/README.md) quantifies
